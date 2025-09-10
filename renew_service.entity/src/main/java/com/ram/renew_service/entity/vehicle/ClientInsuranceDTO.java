@@ -13,4 +13,5 @@ public class ClientInsuranceDTO {
     private LocalDate startDate;
     private LocalDate endDate;
     private Double premiumAmount;
+    private int insuranceType;
 }

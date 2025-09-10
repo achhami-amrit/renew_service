@@ -6,7 +6,6 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.ram.renew_service.api.users.service.UserService;
 import com.ram.renew_service.api.vehicle.repo.VehicleRepository;
 import com.ram.renew_service.entity.vehicle.Vehicle;
 
@@ -14,14 +13,11 @@ import com.ram.renew_service.entity.vehicle.Vehicle;
 public class VehicleService {
 
 	private final VehicleRepository vehicleRepository;
-	private final UserService userService;
 	
-	
-
-	public VehicleService(VehicleRepository vehicleRepository, UserService userService) {
+	public VehicleService(VehicleRepository vehicleRepository) {
 		super();
 		this.vehicleRepository = vehicleRepository;
-		this.userService = userService;
+		
 	}
 
 	public Vehicle createVehicle(Vehicle vehicle, Long ownerId) {

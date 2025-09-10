@@ -29,8 +29,9 @@ public class Insurance {
     private Integer id;
 
     private String insuranceName;
-    private String insuranceType;
+    private int insuranceType;
     private String insuranceAmount;
+    private String policyNo;
 
     @Column(name = "from_date_ad")
     private LocalDate fromDateAd;
