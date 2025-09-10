@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.ram.renew_service.api.users.service.UserService;
 import com.ram.renew_service.api.vehicle.repo.VehicleRepository;
-import com.ram.renew_service.entity.user.Users;
 import com.ram.renew_service.entity.vehicle.Vehicle;
 
 @Service
