@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.ram.renew_service.entity.user.Users;
 import com.ram.renew_service.entity.vehicle.Vehicle;
 
 public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
