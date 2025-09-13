@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ram.renew_service.api.vehicle.repo.InsuranceRepository;
 import com.ram.renew_service.entity.vehicle.ClientInsuranceDTO;
 import com.ram.renew_service.entity.vehicle.Insurance;
 
+@Service
 public class InsuranceService {
 	@Autowired
     private InsuranceRepository insuranceRepository;

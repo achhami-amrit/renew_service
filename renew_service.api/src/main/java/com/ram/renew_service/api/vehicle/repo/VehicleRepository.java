@@ -14,7 +14,7 @@ import com.ram.renew_service.entity.vehicle.Vehicle;
 
 public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
 	Optional<Vehicle> findByPlateNumber(String plateNumber);
-    List<Vehicle> findByOwner(Users owner);
+    //List<Vehicle> findByOwner(Users owner);
     List<Vehicle> findByVehicleType(String vehicleType);
     boolean existsByPlateNumber(String plateNumber);
     boolean existsByChassisNumber(String chassisNumber);
@@ -23,6 +23,6 @@ public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
     @Query("SELECT v FROM Vehicle v WHERE v.insuranceExpiry BETWEEN CURRENT_DATE AND :date")
     List<Vehicle> findVehiclesWithInsuranceExpiringSoon(@Param("date") LocalDate date);
     
-    @Query("SELECT v FROM Vehicle v WHERE v.owner.id = :ownerId")
+    @Query("SELECT v FROM Vehicle v WHERE v.client.clientId = :ownerId")
     List<Vehicle> findByOwnerId(Long ownerId);
 }

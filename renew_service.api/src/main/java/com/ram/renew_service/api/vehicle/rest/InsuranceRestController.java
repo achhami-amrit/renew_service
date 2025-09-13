@@ -2,7 +2,6 @@ package com.ram.renew_service.api.vehicle.rest;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,10 +19,14 @@ import com.ram.renew_service.entity.vehicle.ClientInsuranceDTO;
 public class InsuranceRestController {
 
 
-	    @Autowired
-	    private InsuranceService insuranceService;
+	    private final InsuranceService insuranceService;
+	    
+	    public InsuranceRestController(InsuranceService insuranceService) {
+			super();
+			this.insuranceService = insuranceService;
+		}
 
-	    @PostMapping
+		@PostMapping
 	    public ClientInsuranceDTO createInsurance(@RequestBody ClientInsuranceDTO dto) {
 	        return insuranceService.createInsurance(dto);
 	    }
